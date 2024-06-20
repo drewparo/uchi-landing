@@ -1,0 +1,154 @@
+@keyframes lqdAnimatedGradientIconAnimation {
+	from {
+		transform: translateX(25px);
+	}
+
+	to {
+		transform: translateX(-25px);
+	}
+}
+
+@keyframes lqdAnimatedGradientIconAnimationAfter {
+	from {
+		transform: translateX(25px) rotate(180deg);
+	}
+
+	to {
+		transform: translateX(-25px) rotate(180deg);
+	}
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content {
+	flex-flow: row wrap !important;
+	align-items: center;
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content>.elementor-repeater-fields-wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	order: 2;
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content>.elementor-button-wrapper {
+	margin-inline-start: auto;
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content>.elementor-button-wrapper .elementor-button {
+	width: 35px;
+	height: 35px;
+	padding: 0 !important;
+	position: relative;
+	overflow: hidden;
+	text-indent: -99999px;
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content>.elementor-button-wrapper .elementor-button i {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-indent: 0;
+	transform: translate(-50%, -50%);
+}
+
+.elementor-group-control-liquid-background>.elementor-control-content>.elementor-repeater-fields-wrapper .elementor-repeater-fields {
+	margin: 5px 0;
+}
+
+.elementor-group-control-liquid-background .elementor-control-background .elementor-control-content>.elementor-control-field>.elementor-control-title {
+	max-width: 30%;
+}
+
+.elementor-group-control-liquid-background .elementor-control-particles_config .elementor-control-field-description {
+	order: -1;
+	margin: 0 0 10px;
+}
+
+.elementor-group-control-liquid-background .eicon-barcode .elementor-control-input-wrapper {
+	flex-grow: 1;
+}
+
+.elementor-group-control-liquid-background .eicon-barcode:after {
+	content: '\e907';
+}
+
+.elementor-group-control-liquid-background .eicon-barcode:before,
+.elementor-group-control-liquid-background .eicon-barcode:after {
+	display: inline-block;
+	animation: lqdAnimatedGradientIconAnimation 2s linear infinite alternate;
+}
+
+.elementor-group-control-liquid-background .eicon-barcode:after {
+	animation: lqdAnimatedGradientIconAnimationAfter 2s linear infinite alternate;
+}
+
+.liquid-color-picker-placeholder {
+	--cp-placeholder-bg: #fff;
+	--cp-swatch-border-color: #d5dadf;
+	width: auto;
+	padding: 10px 10px 0;
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	right: 10px;
+	background-color: var(--cp-placeholder-bg);
+	border-radius: 3px;
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	box-shadow: 0 10px 35px rgb(0 0 0 / 10%);
+	pointer-events: none;
+	transition: all 0.45s cubic-bezier(0.23, 1, 0.320, 1);
+	transform: translateY(8px) scale(0.985);
+}
+
+.liquid-color-picker-placeholder.lqd-picker-is-visible {
+	pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0) scale(1);
+}
+
+.liquid-color-picker-trigger {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #d5dadf;
+	border-radius: 3px;
+	position: relative;
+	z-index: 1;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.liquid-color-picker-trigger.lqd-is-empty {
+	background: linear-gradient(135deg, transparent 46%, #ff3030 50%, transparent 54%);
+}
+
+.liquid-color-picker-trigger:not(.lqd-is-empty) {
+	background-image: linear-gradient(45deg, #ddd 25%, transparent 0, transparent 75%, #ddd 0, #ddd), linear-gradient(45deg, #ddd 25%, transparent 0, transparent 75%, #ddd 0, #ddd);
+	background-size: 12px 12px;
+	background-position: 0 0, 6px 6px;
+}
+
+.liquid-color-picker-trigger:not(.lqd-is-empty):after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: var(--lqd-background);
+}
+
+@media (prefers-color-scheme: dark) {
+	.liquid-color-picker-placeholder {
+		--cp-buttons-bg: #34383c;
+		--cp-placeholder-bg: #4c4f56;
+		--cp-swatch-border-color: #d5dadf;
+		--cp-swatch-border-color: #64666a;
+	}
+
+	.liquid-color-picker-trigger {
+		border-color: #64666a;
+	}
+}

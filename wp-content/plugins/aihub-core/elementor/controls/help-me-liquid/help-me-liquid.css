@@ -1,0 +1,37 @@
+@keyframes animate-bg {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.elementor-control-type-liquid-help-me .elementor-control-input-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 6px;
+}
+
+.elementor-button.lqd-help-me-btn {
+	width: 100%;
+	padding: 1.2em !important;
+	background: linear-gradient(-45deg, #fe9c2d, #f02663, #3377ff, #10efbb);
+	background-size: 600%;
+	animation: animate-bg 14s linear infinite;
+}
+
+.lqd-help-me-btn-modifier {
+	display: none !important;
+	width: 48%;
+}
+
+.elementor-control-type-liquid-help-me.modifiers-visible .lqd-help-me-btn-modifier {
+	display: inline-block !important;
+}

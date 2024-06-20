@@ -1,0 +1,1 @@
+.lqd-highlight-wrap{width:var(--lqd-highlight-width, 100%);height:var(--lqd-highlight-height, 100%);bottom:var(--lqd-highlight-offset-bottom, 0);inset-inline-start:var(--lqd-highlight-offset-start, 0);opacity:var(--lqd-highlight-opacity);transition:all var(--lqd-highlight-animation-duration, 0.85s) var(--lqd-highlight-animation-delay, 0s) var(--lqd-transition-timing-function)}

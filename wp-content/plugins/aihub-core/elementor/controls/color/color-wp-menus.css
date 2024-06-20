@@ -1,0 +1,40 @@
+.lqd-colorpicker {
+	position: relative;
+}
+
+.lqd-colorpicker-wrap {
+	display: inline-block;
+}
+
+.lqd-colorpicker-wrap .el-gradientpicker {
+	width: 100%;
+	max-width: 320px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	background: #fff;
+	box-shadow: 0 15px 35px rgb(0 0 0 / 10%);
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.lqd-colorpicker-trigger {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px;
+	height: 30px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.lqd-colorpicker-trigger-span {
+	display: inline-block;
+	width: 27px;
+	height: 100%;
+	margin-inline-end: 3px;
+	border: 1px solid #8c8f94;
+	border-radius: 2px;
+	pointer-events: none;
+}

@@ -1,0 +1,73 @@
+.lqd-chatgpt input{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.lqd-chatgpt:not(.error-login) .lqd-chatgpt--results-error_login,
+.lqd-chatgpt:not(.error-limit) .lqd-chatgpt--results-error_limit,
+
+.lqd-chatgpt:not(.success) .lqd-chatgpt--results-images{
+	display: none;
+}
+.lqd-chatgpt--results-message:not(.ai){
+	align-self: end;
+}
+
+.lqd-chatgpt--loader {
+	display: flex;
+	width: fit-content;
+}
+.lqd-chatgpt--loader .text{
+	margin-left:20px;
+	margin-top: -1px;
+	font-size: 12px;
+	color: inherit;
+}
+
+.lds-ripple {
+	display: inline-block;
+	position: relative;
+	width: 12px;
+	height: 12px;
+}
+
+.lds-ripple div {
+	position: absolute;
+	border: 4px solid #000;
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+	0% {
+		top: 12px;
+		left: 12px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	} 4.9% {
+		top: 12px;
+		left: 12px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	} 5% {
+		top: 12px;
+		left: 12px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	} 100% {
+		top: 0px;
+		left: 0px;
+		width: 24px;
+		height: 24px;
+		opacity: 0;
+	}
+}
